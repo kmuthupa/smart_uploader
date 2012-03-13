@@ -1,0 +1,17 @@
+!!! XML
+!!! strict
+%html{ xmlns: "http://www.w3.org/1999/xhtml" }
+  %head
+    %title= title
+    %link{ rel: "stylesheet", href: "/stylesheets/style.css", type: "text/css"}
+  %body
+    %div{ class: "navbar navbar-fixed-top"}
+      %div{ class: "navbar-inner"}
+        %div{ class: "container"}
+          %a.brand{ href: "#"} Upload Smarter
+      .container
+        .hero-unit
+          = body
+        %hr
+        .footer
+          %p &copy; Karthik Muthupalaniappan 2012
