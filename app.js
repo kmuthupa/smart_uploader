@@ -5,17 +5,15 @@
 
 var express = require('express')
   , routes = require('./routes');
+var http = require("http");
+var url = require("url");
+var sys = require("util");
+var fs = require("fs");
+var haml = require('haml');
 
 var app = module.exports = express.createServer();
 
 // Configuration
-
-var haml = require('haml');
-
-/*
- * Register .haml so that markdown complies with express view system by
- * implementing a compile method
- */
 app.register('.haml', {
   compile: function(str, options) {
     return function(locals) {
@@ -23,7 +21,6 @@ app.register('.haml', {
     }
   }
 });
-
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -43,8 +40,8 @@ app.configure('production', function(){
 });
 
 // Routes
-
 app.get('/', routes.index);
+app.post('/upload', routes.create);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

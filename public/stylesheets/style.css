@@ -3492,3 +3492,8 @@ a.thumbnail:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.form_wrapper {
+  margin: 20px;
+  padding: 10px;	
+  width: 100%;	
+}
