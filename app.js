@@ -43,6 +43,7 @@ app.configure('production', function(){
 // Routes
 app.get('/', routes.index);
 app.post('/upload', routes.upload);
+app.post('/save', routes.save);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

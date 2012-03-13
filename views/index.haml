@@ -2,7 +2,8 @@
 .form_wrapper
   %form{ action: "/upload", method: "post", enctype: "multipart/file" }
     %input#upload-file{ type: "file"}
-    %input{ type: "submit", value: "Submit", class: "success"}
 	.progress{style: "width: 50%"}
 	  .bar
-	%textarea{name: "upload-description"}
+  %form{ action: "/save", method: "post" }
+    %textarea{name: "upload-description"}
+    %input{ type: "submit", value: "Save"}

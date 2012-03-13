@@ -3490,6 +3490,9 @@ a.thumbnail:hover {
 .form_wrapper {
   margin: 20px;
   padding: 10px;	
-  width: 100%;	
+  width: 100%;
+  input {
+	float: left;
+  }	
 }
 
